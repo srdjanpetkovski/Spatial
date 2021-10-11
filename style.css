@@ -1,0 +1,532 @@
+@import url('https://fonts.googleapis.com/css2?family=Raleway:wght@400;700&display=swap');
+
+:root {
+    --fontFamily: 'Raleway', sans-serif;
+    --fontSize: 16px;
+    --accents: #f32853;
+    --hover: #f44066;
+    --white: #fff;
+    --headings: #484848;
+    --gray: #aaa;
+    --text: #666;
+    --background: #F6F6F6;
+    --transition: .3s ease;
+    --padding: 100px 0;
+}
+
+/********** basic styles **********/
+
+* {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+
+body {
+    font-family: var(--fontFamily);
+    font-size: var(--fontSize);
+    font-weight: 400;
+    line-height: 1.6;
+    color: var(--text);
+}
+
+.container {
+    width: 75%;
+    margin: auto;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    font-weight: 700;
+    color: var(--headings);
+}
+
+ul {
+    list-style: none;
+}
+
+a {
+    text-decoration: none;
+}
+
+a:hover {
+    transition: var(--transition);
+}
+
+button {
+    font-weight: 700;
+    font-size: 1.2rem;
+    color: var(--white);
+    background: var(--accents);
+    text-transform: uppercase;
+    padding: 20px 40px;
+    border: none;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+button:hover {
+    background: #f44066;
+}
+
+/********** header **********/
+
+header {
+    background-image: linear-gradient(rgba(72, 72, 72,.7), rgba(72, 72, 72,.7)), url(images/banner.jpg);
+    background-position: top;
+    background-size: cover;
+    background-attachment: fixed;
+    height: 100vh;
+}
+
+.logo {
+    font-size: 1.5rem;
+    text-transform: uppercase;
+    color: var(--white);
+}
+
+nav span {
+    font-weight: 700;
+}
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    padding: 70px 70px 0;
+}
+
+header ul {
+    display: flex;
+}
+
+nav ul li a {
+    font-size: 18px;
+    color: #ddd;
+    font-weight: 400;
+    text-transform: uppercase;
+}
+
+nav ul li a:hover {
+    color: var(--white);
+    transition: var(--transition);
+}
+
+nav ul li {
+    margin-right: 60px;
+}
+
+nav ul li:last-child {
+    margin-right: 0;
+}
+
+header div {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    align-items: center;
+    text-transform: uppercase;
+    justify-content: center;
+    height: 75vh;
+}
+
+header div h1 {
+    font-weight: 700;
+    font-size: 4rem;
+    color: var(--white);
+    padding-bottom: 20px;
+}
+
+header div p {
+    font-size: 1.3rem;
+    color: #aaa;
+    padding-bottom: 50px;
+}
+
+/********** intro **********/
+
+.intro {
+    display: flex;
+    flex-wrap: wrap;
+    padding: var(--padding);
+    justify-content: space-between;
+    width: 60%;
+    margin: 0 auto;
+}
+
+.intro article:first-child {
+    flex: 0 0 40%;
+}
+
+.intro article:last-child {
+    flex: 0 0 50%;
+}
+
+.intro h2,
+.gallery h2 {
+    font-weight: 700;
+    font-size: 2.8rem;
+    color: var(--headings);
+}
+
+.intro h4,
+.gallery h4 {
+    font-size: 1.6rem;
+    color: var(--gray);
+    font-weight: 400;
+}
+
+.intro p {
+    font-size: var(--fontSize);
+    color: var(--text);
+    line-height: 1.8;
+}
+
+.intro p:first-child {
+    padding-bottom: 30px;
+}
+
+/********** gallery **********/
+
+.gallery {
+    background: var(--background);
+    padding: var(--padding);
+    text-align: center;
+}
+
+.gallery .container div img {
+    width: 100%;
+    display: block;
+}
+
+.gallery .container {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    margin-top: 80px;
+}
+
+.gallery .container div {
+    flex: 0 0 45%;
+    background: var(--white);
+}
+
+.gallery .container div h3 {
+    padding: 30px 0;
+    font-weight: 700;
+    font-size: 1.4rem;
+    color: var(--headings);
+}
+
+.gallery div button:last-child {
+    background: #323037;
+    transition: var(--transition);
+}
+
+.gallery div button:first-child {
+    margin-right: 20px;
+}
+
+.buttons {
+    margin-top: 60px;
+}
+
+/********** services **********/
+
+.services {
+    padding: var(--padding);
+    padding-bottom: 20px;
+}
+
+.services article {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    margin-top: 100px;
+}
+
+.services article .col {
+    display: flex;
+    flex: 0 0 47%;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 80px;
+}
+
+.services article img {
+    width: 100%;
+    border-radius: 50%;
+    border: 8px solid #e3e3e3;
+    display: block;
+}
+
+.services article img:hover  {
+    border: 8px solid var(--accents);
+    transition: var(--transition);
+}
+
+.services article .col .text {
+    flex: 0 0 66%;
+}
+
+.services article .col .img {
+    flex: 0 0 27%;
+}
+
+.services article .col:nth-child(even) .text {
+    order: 2;
+}
+
+.services article .col:nth-child(even) .img {
+    order: 1;
+}
+
+.services article .col:nth-child(odd) .text {
+    text-align: right;
+}
+
+.services .text h3 {
+    text-transform: uppercase;
+    font-size: 1.5rem;
+}
+
+.services .text h5 {
+    text-transform: uppercase;
+    font-size: 1rem;
+    color: var(--gray);
+    font-weight: 300;
+    padding-bottom: 20px;
+}
+
+.services .text p {
+    font-size: 1.1rem;
+}
+
+/********** cta **********/
+
+.cta {
+    text-align: center;
+    background-image: linear-gradient(rgba(72, 72, 72,.7), rgba(72, 72, 72,.7)), url(images/banner.jpg);
+    background-position: center;
+    background-attachment: fixed;
+    background-size: cover;
+    padding: var(--padding);
+}
+
+.cta h2 {
+    color: var(--white);
+    font-size: 2.5rem;
+    margin-bottom: 15px;
+}
+
+.cta h4 {
+    font-size: 1.3rem;
+    font-weight: 300;
+    color: var(--gray);
+    margin-bottom: 30px;
+}
+
+/********** footer **********/
+
+footer {
+    text-align: center;
+    padding: var(--padding);
+    color: var(--gray);
+    background: #f6f6f6;
+}
+
+footer a i  {
+    font-size: 3rem;
+    color: var(--gray);
+}
+
+footer div:first-child a {
+    margin-right: 60px;
+}
+
+footer div:first-child a:last-child {
+    margin-right: 0;
+}
+
+footer div:last-child ul li {
+    display: inline;
+}
+
+footer div:last-child ul li a {
+    font-size: 0.9rem;
+    color: var(--gray);
+}
+
+footer div:last-child ul li a:hover {
+    color: var(--text);
+    transition: var(--transition);
+}
+
+footer div:last-child ul li {
+    border-right: 1px solid var(--gray);
+    color: var(--gray);
+    padding-right: 20px;
+    padding-left: 20px;
+}
+
+footer div:last-child ul li:last-child {
+    border: none;
+    padding-right: 0;
+}
+
+footer div:last-child ul li:first-child {
+    padding-left: 0;
+}
+
+footer div:last-child {
+    margin-top: 50px;
+}
+
+/********** responsive **********/
+
+@media(max-width: 767px) {
+
+    .logo {
+        font-size: 1.2rem;
+        text-align: center;
+        margin-bottom: 20px;
+    }
+
+    nav {
+        flex-direction: column;
+        padding: 35px 20px 0 20px;
+    }
+
+    nav ul li a {
+        font-size: 16px;
+        margin-left: 0 auto;
+    }
+
+    nav ul li {
+        position: relative;
+    }
+
+    header div h1 {
+        font-size: 2.5rem;
+        padding-bottom: 40px;
+    }
+
+    header div {
+        height: 65vh;
+    }
+    header div p {
+        font-size: 1rem;
+        line-height: 1.8;
+        padding-bottom: 50px;
+    }
+    button {
+        width: 70%;
+    }
+    .intro {
+        padding: 20px;
+        width: 100%;
+    }
+    .intro article:first-child {
+        flex: 0 0 100%;
+    }
+    
+    .intro article:last-child {
+        flex: 0 0 100%;
+    }
+    .intro h2,
+    .gallery h2,
+    .services h2,
+    .cta h2 {
+        font-size: 1.75rem;
+        padding-bottom: 25px;
+    }
+    .intro h4,
+    .gallery h4 {
+        font-size: 1.3rem;
+        padding-bottom: 30px;
+    }
+
+    .gallery,
+    .services,
+    .cta,
+    footer {
+        padding: 30px 20px;
+    }
+
+    .gallery .container {
+        width: 100%;
+        margin-top: 30px;
+    }
+
+    .gallery .container div {
+        flex: 0 0 100%;
+    }
+
+    .gallery .container div h3 {
+        padding: 30px 5px;
+        font-size: 1.1rem;
+    }
+
+    .gallery .container div:first-child {
+        margin-bottom: 30px;
+    }
+
+    .buttons {
+        margin-top: 30px;
+    }
+
+    .buttons button {
+        width: 100%;
+    }
+
+    .buttons button:first-child {
+        margin-bottom: 15px;
+    }
+
+    .services .first-paragraph,
+    .cta h4 {
+        font-size: 1.1rem;
+    }
+
+    .services article .col {
+        flex: 0 0 100%;
+    }
+
+    .services article .col:nth-child(even) .text {
+        order: 2;
+    }
+    
+    .services article .col:nth-child(even) .img {
+        order: 1;
+    }
+
+    .container {
+        width: 90%;
+    }
+
+    .services article {
+        margin-top: 35px;
+    }
+
+    .title {
+        text-align: center;
+    }
+
+    .cta button {
+        width: 80%;
+    }
+
+    footer a i  {
+        font-size: 2rem;
+    }
+
+    footer div:first-child a {
+        margin-right: 30px;
+    }
+
+    footer div:last-child {
+        margin-top: 30px;
+    }
+
+    footer div:last-child ul li a {
+        font-size: 0.7rem;
+    }
+}
